@@ -1,4 +1,4 @@
-package javapackege;
+package DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +18,7 @@ public class UserDAO {
 		ArrayList<String> allUsersEmail = new ArrayList<String>();
 
 		try {
-			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/userdatabase", "postgres", "java");
+			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
 			stmt = c.createStatement();
 			rs = stmt.executeQuery("SELECT email FROM usertable;");
 			while (rs.next()) {
