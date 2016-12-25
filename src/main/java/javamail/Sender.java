@@ -45,20 +45,7 @@ public class Sender {
 
       try {
 		
-//    	  ArrayList email= new ArrayList();
-//          while(rs.next()) {
-//
-//                    email.add(rs.getString("email"));
-//          }
-//
-//
-//        Message message = new MimeMessage(session);
-//
-//       InternetAddress[] address = new InternetAddress[email.size()];
-//        for (int i = 0; i < email.size(); i++) {
-//            address[i] = new InternetAddress(email.get(i));
-//        }
-//         message.setRecipients(Message.RecipientType.TO, address);
+
     	  
          // Create a default MimeMessage object.
          Message message = new MimeMessage(session);
@@ -78,9 +65,10 @@ public class Sender {
          }
          message.setRecipients(Message.RecipientType.TO, address);
          
-//         message.setRecipients(Message.RecipientType.TO,
+       /*for 1 recipient
+//         message.setRecipients(Message.RecipientType.TO,   
 //         InternetAddress.parse(to));
-
+*/
          // Set Subject: header field
          message.setSubject("Testing Subject");
 
