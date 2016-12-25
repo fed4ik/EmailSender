@@ -1,7 +1,7 @@
 package application;
 
+import javamail.MailConstructor;
 import javamail.MailSender;
-import model.ModelOfMail;
 
 public class TestingClass {
 
@@ -12,7 +12,7 @@ public class TestingClass {
 //		for (String email : emailList) {
 //			System.out.println(email);
 //		}
-		ModelOfMail modelMail = new ModelOfMail();
+		MailConstructor modelMail = new MailConstructor();
 		MailSender sender = new MailSender();
 		sender.sendMail(modelMail);
 		

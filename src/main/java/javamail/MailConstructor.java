@@ -1,17 +1,17 @@
-package model;
+package javamail;
 
-public class ModelOfMail {
+public class MailConstructor {
 	String to = "fed4iksasha@gmail.com";
 	String from = "kochedikov.ilia@gmail.com";
 	String username = "kochedikov.ilia@gmail.com";
 	String password = "Ko4ed9871iko";
 	String text;
 
-	public ModelOfMail() {
-
+	public MailConstructor() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public ModelOfMail(String to, String from, String username, String password, String text) {
+	public MailConstructor(String to, String from, String username, String password, String text) {
 		this.to = to;
 		this.from = from;
 		this.username = username;

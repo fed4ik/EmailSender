@@ -10,10 +10,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import model.ModelOfMail;
-
 public class MailSender {
-	public void sendMail(ModelOfMail mailModel) {
+	public void sendMail(MailConstructor mailModel) {
 		// Recipient's email ID needs to be mentioned.
 		String to = "fed4iksasha@gmail.com";// change accordingly
 
