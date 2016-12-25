@@ -16,10 +16,10 @@ public class MailSender {
 		String to = "fed4iksasha@gmail.com";// change accordingly
 
 		// Sender's email ID needs to be mentioned
-		String from = "kochedikov.ilia@gmail.com";// change accordingly
-		final String username = "kochedikov.ilia@gmail.com";// change
+		String from = "javahomesfk@gmail.com";// change accordingly
+		final String username = "javahomesfk@gmail.com";// change
 															// accordingly
-		final String password = "Ko4ed9871iko";// change accordingly
+		final String password = "JavaHome01";// change accordingly
 
 		// Assuming you are sending email through relay.jangosmtp.net
 		String host = "smtp.gmail.com";

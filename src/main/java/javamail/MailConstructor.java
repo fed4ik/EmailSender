@@ -2,9 +2,9 @@ package javamail;
 
 public class MailConstructor {
 	String to = "fed4iksasha@gmail.com";
-	String from = "kochedikov.ilia@gmail.com";
-	String username = "kochedikov.ilia@gmail.com";
-	String password = "Ko4ed9871iko";
+	String from = "javahomesfk@gmail.com";
+	String username = "javahomesfk@gmail.com";
+	String password = "JavaHome01";
 	String text;
 
 	public MailConstructor() {
