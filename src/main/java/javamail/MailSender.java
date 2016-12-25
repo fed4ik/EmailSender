@@ -1,5 +1,6 @@
 package javamail;
 
+import java.util.ArrayList;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -10,6 +11,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import DAO.UserDAO;
+
 public class MailSender {
 	public void sendMail(MailConstructor mailModel) {
 		// Recipient's email ID needs to be mentioned.
@@ -17,8 +20,7 @@ public class MailSender {
 
 		// Sender's email ID needs to be mentioned
 		String from = "javahomesfk@gmail.com";// change accordingly
-		final String username = "javahomesfk@gmail.com";// change
-															// accordingly
+		final String username = "javahomesfk@gmail.com";// change accordingly
 		final String password = "JavaHome01";// change accordingly
 
 		// Assuming you are sending email through relay.jangosmtp.net
@@ -45,7 +47,22 @@ public class MailSender {
 			message.setFrom(new InternetAddress(from));
 
 			// Set To: header field of the header.
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+			  // Set To: header field of the header.
+	         UserDAO dao = new UserDAO();
+	         ArrayList<String> emailList = dao.getAllEmail();
+	         for (String email : emailList) {
+	        	 System.out.println(email);
+	         }
+	         InternetAddress[] address = new InternetAddress[emailList.size()];
+	         for (int i = 0; i < emailList.size(); i++) {
+	        	 address[i] = new InternetAddress(emailList.get(i));
+	         }
+	         message.setRecipients(Message.RecipientType.TO, address);
+	        
+	         /*for 1 recipient
+//	         message.setRecipients(Message.RecipientType.TO,   
+//	         InternetAddress.parse(to));
+	*/
 
 			// Set Subject: header field
 			message.setSubject("Testing Subject");
